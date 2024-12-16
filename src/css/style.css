@@ -1,3 +1,9 @@
 .fondo{
     background-color: rgb(188, 230, 238);
 }
+
+.citas{
+    height: auto; 
+    min-height: 200px; 
+    
+}

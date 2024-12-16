@@ -3,6 +3,7 @@ import "../css/style.css";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
+import CitasLista from "./CitasLista"
 
 const ListaFormulario = () => {
   return (
@@ -89,8 +90,11 @@ const ListaFormulario = () => {
         </form>
       </div>
     </article>
+
+    <article>
+      <CitasLista></CitasLista>
+    </article>
   </section>
-  
   
   );
 };
