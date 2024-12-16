@@ -1,4 +1,5 @@
 import React from "react";
+import Citas from "./Citas"
 
 const CitasLista = () => {
   return (
@@ -12,7 +13,7 @@ const CitasLista = () => {
       </div>
 
       <div className="border citas fondo shadow mb-5">
-        
+        <Citas></Citas>
       </div>
       
     </article>
