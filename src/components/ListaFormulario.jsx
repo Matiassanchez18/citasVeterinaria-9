@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/style.css";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -14,7 +14,9 @@ const ListaFormulario = () => {
     reset,
   } = useForm();
 
-  const [arrayCitas, setarrayCitas] = useState([]);
+  const citasLocalStorage = JSON.parse(localStorage.getItem("CitasKey")) || [];
+
+  const [arrayCitas, setarrayCitas] = useState(citasLocalStorage);
   const [contadorID, setContadorId] = useState(0);
 
   const enviadoForm = (data) => {
@@ -33,6 +35,11 @@ const ListaFormulario = () => {
     reset();
     setContadorId(contadorID + 1);
   };
+
+  useEffect(() => {
+    console.log("desde useEffect"),
+      localStorage.setItem("CitasKey", JSON.stringify(arrayCitas));
+  }, [arrayCitas]);
 
   return (
     <section className="container">
@@ -96,15 +103,20 @@ const ListaFormulario = () => {
                   {errors.nombreDueno?.message}
                 </Form.Text>
               </div>
-              <div className="mb-3 row ms-5">
-                <div className="col-12 col-sm-4 col-lg-4 mb-3 mb-sm-0 ms-5">
+
+              <div className="ms-5
+              ">
+
+              
+              <div className="mb-3 row ms-5 ">
+                <div className="col-12 col-sm-6 col-lg-6 mb-3 mb-sm-0 ">
                   <label htmlFor="fecha" className="form-label">
                     <b>Fecha</b>
                   </label>
                   <Form.Control
                     id="fecha"
                     type="date"
-                    className="rounded w-50"
+                    className="rounded w-75"
                     placeholder="Fecha"
                     aria-label="Fecha"
                     aria-describedby="basic-addon1"
@@ -124,14 +136,14 @@ const ListaFormulario = () => {
                     {errors.fecha?.message}
                   </Form.Text>
                 </div>
-                <div className="col-12 col-sm-4 col-lg-4">
+                <div className="col-12 col-sm-6 col-lg-6">
                   <label htmlFor="hora" className="form-label">
                     <b>Hora</b>
                   </label>
                   <Form.Control
                     type="time"
                     id="hora"
-                    className="rounded w-50"
+                    className="rounded w-75"
                     placeholder="Hora"
                     aria-label="Hora"
                     aria-describedby="basic-addon1"
@@ -156,6 +168,7 @@ const ListaFormulario = () => {
                     {errors.hora?.message}
                   </Form.Text>
                 </div>
+              </div>
               </div>
 
               <div className="mb-3 w-75 mx-auto">
@@ -194,7 +207,7 @@ const ListaFormulario = () => {
       </article>
 
       <article>
-        <CitasLista arrayCitas = {arrayCitas}></CitasLista>
+        <CitasLista arrayCitas={arrayCitas}></CitasLista>
       </article>
     </section>
   );
