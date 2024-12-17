@@ -31,7 +31,6 @@ const ListaFormulario = () => {
       },
     ]);
     reset();
-    console.log(arrayCitas);
     setContadorId(contadorID + 1);
   };
 
