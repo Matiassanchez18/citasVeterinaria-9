@@ -2,7 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-const Citas = ({ cita }) => {
+const Citas = ({ cita, borrarCita}) => {
   return (
     <div className="col-12 col-md-6 col-sm-6 mt-2">
       <Card className="h-100 shadow-lg rounded-3">
@@ -41,7 +41,7 @@ const Citas = ({ cita }) => {
           </div>
         </Card.Body>
         <Card.Footer className="text-center bg-light rounded-bottom">
-          <Button variant="danger" className="rounded-pill px-4 py-2">
+          <Button variant="danger" className="rounded-pill px-4 py-2" onClick={()=>borrarCita(cita)}>
             Borrar
           </Button>
         </Card.Footer>

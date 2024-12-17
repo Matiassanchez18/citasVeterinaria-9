@@ -41,6 +41,11 @@ const ListaFormulario = () => {
       localStorage.setItem("CitasKey", JSON.stringify(arrayCitas));
   }, [arrayCitas]);
 
+  const borrarCita = (citaEliminar) =>{
+    const citaEncontrar = arrayCitas.filter((citas)=> citas !== citaEliminar)
+    setarrayCitas(citaEncontrar);
+  }
+
   return (
     <section className="container">
       <article className="mt-5 mx-auto p-3">
@@ -207,7 +212,7 @@ const ListaFormulario = () => {
       </article>
 
       <article>
-        <CitasLista arrayCitas={arrayCitas}></CitasLista>
+        <CitasLista arrayCitas={arrayCitas} borrarCita = {borrarCita} ></CitasLista>
       </article>
     </section>
   );

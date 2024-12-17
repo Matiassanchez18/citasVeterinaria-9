@@ -1,7 +1,7 @@
 import React from "react";
 import Citas from "./Citas";
 
-const CitasLista = ({ arrayCitas }) => {
+const CitasLista = ({ arrayCitas, borrarCita }) => {
   return (
     <article className="mt-5">
       <div className="border-bottom border-black shadow">
@@ -15,7 +15,7 @@ const CitasLista = ({ arrayCitas }) => {
       <div className="border citas fondo shadow mb-5">
         <div className="row p-3">
           {arrayCitas.map((cita, posicion) => (
-            <Citas cita={cita} key={posicion} />
+            <Citas cita={cita} key={posicion} borrarCita ={borrarCita}/>
           ))}
         </div>
       </div>
