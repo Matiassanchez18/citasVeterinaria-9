@@ -195,7 +195,7 @@ const ListaFormulario = () => {
       </article>
 
       <article>
-        <CitasLista></CitasLista>
+        <CitasLista arrayCitas = {arrayCitas}></CitasLista>
       </article>
     </section>
   );

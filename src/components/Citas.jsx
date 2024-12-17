@@ -3,11 +3,10 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { CircleFill } from "react-bootstrap-icons";
 
-const Citas = () => {
+const Citas = ({array}) => {
   return (
-    <section>
-    <article>
-      <div className="row p-3">
+    
+      
         <div className="col-12 col-md-6 col-sm-6 mt-2">
           <Card className="h-100 shadow-lg rounded-3">
             <Card.Header className="bg-primary text-white rounded-top">
@@ -22,7 +21,7 @@ const Citas = () => {
                   <p className="ms-5 fs-5 fw-bold">Fecha</p>
                 </div>
                 <div className="col-12 col-md-6 col-sm-6 mt-2">
-                  <p className="border p-2 rounded-3 text-center" style={{ backgroundColor: '#f8f9fa' }}>142451</p>
+                  <p className="border p-2 rounded-3 text-center" >142451</p>
                 </div>
               </div>
   
@@ -31,7 +30,7 @@ const Citas = () => {
                   <p className="ms-5 fs-5 fw-bold">Hora</p>
                 </div>
                 <div className="col-12 col-md-6 col-sm-6 mt-2">
-                  <p className="border p-2 rounded-3 text-center" style={{ backgroundColor: '#f8f9fa' }}>14:25</p>
+                  <p className="border p-2 rounded-3 text-center" >14:25</p>
                 </div>
               </div>
   
@@ -40,7 +39,7 @@ const Citas = () => {
                   <p className="ms-5 fs-5 fw-bold">Síntomas</p>
                 </div>
                 <div className="col-12 col-md-6 col-sm-6 mt-2">
-                  <p className="border p-2 rounded-3 text-center" style={{ backgroundColor: '#f8f9fa' }}>Fiebre alta, tos</p>
+                  <p className="border p-2 rounded-3 text-center" >Fiebre alta, tos</p>
                 </div>
               </div>
             </Card.Body>
@@ -49,9 +48,8 @@ const Citas = () => {
             </Card.Footer>
           </Card>
         </div>
-      </div>
-    </article>
-  </section>
+    
+   
   
   );
 };
