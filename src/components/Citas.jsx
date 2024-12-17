@@ -8,8 +8,8 @@ const Citas = ({ cita }) => {
       <Card className="h-100 shadow-lg rounded-3">
         <Card.Header className="bg-primary text-white rounded-top">
           <ul className="list-unstyled">
-            <li className="fs-4">Mascota: {cita.NombreMascota} </li> {/* Aquí accedes a los datos de la cita */}
-            <li className="fs-5 lead">Dueño: {cita.NombreDueno} </li> {/* Aquí accedes a los datos del dueño */}
+            <li className="fs-4">Mascota: {cita.NombreMascota} </li> 
+            <li className="fs-5 lead">Dueño: {cita.NombreDueno} </li> 
           </ul>
         </Card.Header>
         <Card.Body>
@@ -18,7 +18,7 @@ const Citas = ({ cita }) => {
               <p className="ms-5 fs-5 fw-bold">Fecha</p>
             </div>
             <div className="col-12 col-md-6 col-sm-6 mt-2">
-              <p className="border p-2 rounded-3 text-center">{cita.Fecha}</p> {/* Aquí accedes a la fecha */}
+              <p className="border p-2 rounded-3 text-center">{cita.Fecha}</p> 
             </div>
           </div>
 
@@ -27,7 +27,7 @@ const Citas = ({ cita }) => {
               <p className="ms-5 fs-5 fw-bold">Hora</p>
             </div>
             <div className="col-12 col-md-6 col-sm-6 mt-2">
-              <p className="border p-2 rounded-3 text-center">{cita.Hora}</p> {/* Aquí accedes a la hora */}
+              <p className="border p-2 rounded-3 text-center">{cita.Hora}</p> 
             </div>
           </div>
 
@@ -36,7 +36,7 @@ const Citas = ({ cita }) => {
               <p className="ms-5 fs-5 fw-bold">Síntomas</p>
             </div>
             <div className="col-12 col-md-6 col-sm-6 mt-2">
-              <p className="border p-2 rounded-3 text-center">{cita.Sintomas}</p> {/* Aquí accedes a los síntomas */}
+              <p className="border p-2 rounded-3 text-center">{cita.Sintomas}</p>
             </div>
           </div>
         </Card.Body>
